@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cztest</title>
+	<link href="cz.css" rel="stylesheet" type="text/css"/>
+	<link href="daterangepicker.css" rel="stylesheet" type="text/css"/>
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="cz.js"></script>
+	<script type="text/javascript" src="daterangepicker.js"></script>
+	 <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="moment.js"></script>
+	<script type="text/javascript" src="require.js"></script>
+</head>
+<body onload="ceshi()">
+<button class="demo">点击我</button>
+<div class="cztestDiv">
+	cccz1996
+</div>
+
+<div class="caidan">
+	<ul class="dingji">
+		<li>
+			<a href="#">顶级菜单</a>
+			<ul class="tanchu">
+				<li>弹出菜单1</li>
+				<li>弹出菜单2</li>
+				<li>弹出菜单3</li>
+				<li>弹出菜单4</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div class="beiyou">
+	<ul class="beiyou1">
+	<ul class="beiyou1">
+		<li>
+			<a href="#">北邮概况</a>
+			<ul class="beiyou2">
+				<li>走进北邮</li>
+				<li>领导机构</li>
+				<li>校长讲话</li>
+				<li>历史沿革</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">学在北邮</a>
+			<ul class="beiyou2">
+				<li>走进北邮</li>
+				<li>领导机构</li>
+				<li>校长讲话</li>
+				<li>历史沿革</li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">院系机构</a>
+			<ul class="beiyou2">
+				<li>走进北邮</li>
+				<li>领导机构</li>
+				<li>校长讲话</li>
+				<li>历史沿革</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<div style="margin-top:200px;"></div>
+
+<div class="table-top">
+	<div class="table-son-red">
+		
+	</div>
+	
+	<div class="table-son-gray">
+		
+	</div>
+	
+	<div class="table-son-green">
+		
+	</div>
+	
+	<div class="table-son-yellow">
+		
+	</div>
+	
+	<div class="table-son-black">
+		
+	</div>
+</div>
+
+<div style="margin-top:100px;"></div>
+
+<div>
+	<input type="text" style="margin-left:200px;" id="textId"/>
+	<script>
+	requirejs(['jquery', 'moment', 'daterangepicker'] , function ($, moment) {
+		$('#textId').daterangepicker({
+						singleDatePicker:true,
+						timePicker: true,
+						timePicker12Hour: false,
+						opens:'right',
+						timePickerIncrement: 1,
+						format: 'YYYY-MM-DD HH:mm:ss',
+						changeMonth : true,
+						changeYear : true,
+						yearRange: '-20:+20',
+						locale:
+						{
+							fromLabel : '起始时间：',
+							toLabel : '结束时间：',
+							applyLabel : '确定',
+							cancelLabel : '取消',
+							daysOfWeek : [ '日', '一', '二', '三', '四', '五', '六' ],
+							monthNames : [ '一月', '二月', '三月', '四月', '五月', '六月',
+							'七月', '八月', '九月', '十月', '十一月', '十二月' ],
+							firstDay:1
+						}
+					});
+	});
+	</script>
+</div>
+<div style="margin-top:300px;"></div>
+</body>
+</html>
